@@ -5,6 +5,12 @@ Założenia:<br/>
 - zastosowanie czcionki Roboto
 - wyswietlanie danych json z adresu url oraz dodatkowy ustawieniu header requesta
 
+Dodadkowe:<br/>
+
+-paginacja, wyświetlanie określonej ilości użytkowników na "strone"
+-wyszukiwanie po ilośc strzelonych goli, nazwy nazwodnika oraz pozycji w rankingu
+-wyswietlanie dodatkowych informacji (z json) w oddzielnym oknie po kliknięciu na wybranego przez nas gracza
+-zamknięcie wyświetlania dodatkowych informacji
 
 ## W projekcie wykorzystana została biblioteka "React" oraz "SCSS"
 <br/>
