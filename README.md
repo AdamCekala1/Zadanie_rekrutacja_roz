@@ -9,7 +9,7 @@ Założenia:<br/>
 ## W projekcie wykorzystana została biblioteka "React" oraz "SCSS"
 <br/>
 ## Dodatkowe informacje : <br/>
-Podgląd projektu online na stronie Github Pages : https://adamcekala1.github.io/Zadanie_rekrutacja/
+Podgląd projektu online na stronie Github Pages : https://adamcekala1.github.io/Zadanie_rekrutacja_roz/
 <br/>
 Wersja produkcyjna dosepna w katalogu docs 
 <br/>
@@ -50,7 +50,7 @@ gdzie Ranking to nasz główny komponent a 'root' to id do któego chcemy go prz
 
 ## Uruchomienie projektu:<br/>
 Projekt można uruchomić na kilka sposobów. Podam rozwiązanie dla wersji dev oraz prod.<br/>
-Pierwszym sposobem do wglądu jest uruchomienie w przeglądarce pliku docs->index.html lub podgląd na stronie GithubPages: https://adamcekala1.github.io/Zadanie_rekrutacja/ <br/>
+Pierwszym sposobem do wglądu jest uruchomienie w przeglądarce pliku docs->index.html lub podgląd na stronie GithubPages: https://adamcekala1.github.io/Zadanie_rekrutacja_roz/ <br/>
 Drugim sposobem jest pobranie projektu poprzez klonowanie, rozpakowanie. W konsoli przechodzimy do rozpakowanego folderu lub (w przypadku systemu windows) trzymając przycisk shift klikamy prawym przyciskiem myszy na nasz folder i wybieramy otwarcie konsoli w tym miejscu. Kolejnym krokiem jest instalacja modułów zawartych w package.json poprzez "npm install". Po instalacji wystarczy wpisać "npm start" by nasza strona została uruchomiona.
 <br/><br/>
 
