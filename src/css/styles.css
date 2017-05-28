@@ -1,0 +1,211 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  min-width: 300px;
+  margin: 0;
+  background: #2f3235; }
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative; }
+
+.headerSection {
+  color: #fff;
+  width: 100%;
+  text-align: center; }
+  @media (min-width: 992px) {
+    .headerSection {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-flow: row wrap;
+      -webkit-flex-flow: row wrap;
+      text-align: left;
+      align-items: center; } }
+  .headerSection .content {
+    position: relative;
+    flex: 6; }
+    @media (min-width: 992px) {
+      .headerSection .content {
+        padding-left: 50px; } }
+  .headerSection .imageContainer {
+    flex: 1;
+    overflow: hidden; }
+    .headerSection .imageContainer img {
+      width: 100%;
+      max-width: 330.66667px;
+      height: auto; }
+
+.mainTable {
+  position: relative; }
+
+table {
+  padding: 30px 0;
+  border-spacing: 0px;
+  width: 100%; }
+  table th, table td {
+    padding: 15px; }
+  table > thead {
+    background-color: green;
+    color: #fff;
+    text-transform: uppercase; }
+    table > thead th, table > thead td {
+      padding: 7px; }
+    table > thead > tr > th:nth-child(1) {
+      width: 20%; }
+    table > thead > tr > th:nth-child(2) {
+      width: 70%; }
+    table > thead > tr > th:nth-child(3) {
+      width: 10%; }
+
+.dataRows > tr:nth-child(odd) {
+  background-color: #f2f2f2; }
+  .dataRows > tr:nth-child(odd):hover {
+    background-color: #ebebeb; }
+.dataRows > tr:nth-child(even) {
+  background-color: #fafafa; }
+  .dataRows > tr:nth-child(even):hover {
+    background-color: white; }
+.dataRows > tr > td {
+  text-align: center;
+  position: relative; }
+  .dataRows > tr > td:nth-child(1):after, .dataRows > tr > td:nth-child(2):after {
+    content: '';
+    height: 70%;
+    width: 2px;
+    background: #e0e0e0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0; }
+  .dataRows > tr > td:nth-child(1), .dataRows > tr > td:nth-child(3) {
+    font-weight: 700;
+    font-size: 18px; }
+  .dataRows > tr > td:nth-child(2) {
+    text-align: left;
+    padding-left: 30px;
+    text-transform: capitalize; }
+.dataRows > .fetchError {
+  background: #fff;
+  color: #2f3235; }
+
+.searchInputs input {
+  border: none;
+  width: 90%;
+  padding: 10px 5%;
+  border-radius: 10px; }
+  .searchInputs input:hover, .searchInputs input:active, .searchInputs input:focus {
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75); }
+
+.pagination ul {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center; }
+  .pagination ul > ul {
+    padding-left: 0; }
+  .pagination ul li {
+    cursor: pointer;
+    list-style: none;
+    padding: 20px;
+    background: black;
+    color: white; }
+    .pagination ul li:hover {
+      background: gray; }
+  .pagination ul li.disabled {
+    background: gray;
+    cursor: default; }
+  .pagination ul li.activeButtonPaginate {
+    background: navy; }
+
+.displayMoreInformation {
+  padding: 70px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative; }
+  .displayMoreInformation .moreInfItem {
+    padding: 20px 5px;
+    overflow: auto; }
+    .displayMoreInformation .moreInfItem:nth-child(4n+1), .displayMoreInformation .moreInfItem:nth-child(4n+3) {
+      width: 100%; }
+      @media (min-width: 992px) {
+        .displayMoreInformation .moreInfItem:nth-child(4n+1), .displayMoreInformation .moreInfItem:nth-child(4n+3) {
+          width: 20%; } }
+    .displayMoreInformation .moreInfItem:nth-child(4n+2), .displayMoreInformation .moreInfItem:nth-child(4n+4) {
+      width: 100%; }
+      @media (min-width: 992px) {
+        .displayMoreInformation .moreInfItem:nth-child(4n+2), .displayMoreInformation .moreInfItem:nth-child(4n+4) {
+          width: 60%;
+          padding: 20px; } }
+    .displayMoreInformation .moreInfItem:nth-child(4n+1), .displayMoreInformation .moreInfItem:nth-child(4n+2) {
+      background: #fafafa;
+      position: relative; }
+    .displayMoreInformation .moreInfItem:nth-child(4n+3), .displayMoreInformation .moreInfItem:nth-child(4n+4) {
+      background: #f2f2f2;
+      position: relative; }
+  .displayMoreInformation .closeMoreInformation {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    padding: 20px 100px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    transform: translateX(50%);
+    transition: all 0.5s; }
+    .displayMoreInformation .closeMoreInformation:hover {
+      color: #2f3235;
+      background: #fff; }
+
+.footerSection {
+  background: #171a1d;
+  text-align: center;
+  padding: 20px 0; }
+  .footerSection h4 {
+    color: #576167;
+    display: inline-block;
+    margin: 0;
+    padding: 20px;
+    border-width: 2px 0 2px 0;
+    border-color: #576167;
+    border-style: solid; }
+
+.loadingPage {
+  width: 100%;
+  height: 10vw;
+  color: #fff;
+  text-align: center; }
+  .loadingPage h2 {
+    margin-top: -80px; }
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out; }
+
+@-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(120px); }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg); }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg); } }
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
+
+/*# sourceMappingURL=styles.css.map */
