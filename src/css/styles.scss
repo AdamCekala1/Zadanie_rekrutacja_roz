@@ -182,6 +182,8 @@ input{
 //##################################
 //PAgination
 .pagination ul{
+    overflow: hidden;
+    padding:0;
     >ul{
         padding-left:0;
     }
@@ -189,6 +191,7 @@ input{
     flex-direction: row;
     align-content: center;
     justify-content:center;
+    flex-wrap: wrap;
     li{
         cursor: pointer;
         list-style: none;
@@ -200,11 +203,22 @@ input{
         }
     }
     li.disabled{
-            background: gray;
-            cursor:default;
+        input{
+            width:100%;
+            height:100%;
+            max-width: 80px;
+            padding:0;
+            margin:0;
+            font-size: 16px;
+            text-align: center;
+        }
+        padding:0;
+       // background: gray;
+        cursor:default;
     }
     li.activeButtonPaginate{
         background:navy;
+        padding:20px;
     }
     
 }

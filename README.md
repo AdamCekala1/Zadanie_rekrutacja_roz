@@ -1,23 +1,23 @@
+Podgląd projektu online na stronie Github Pages : https://adamcekala1.github.io/Zadanie_rekrutacja_roz/
 ## Projekt wykonany jako zadanie rekrutacyjne. <br/>
+Wersja z własnym rozwinięciem. Rozwinięcie w celach treningowych. <br/>
+Wersja podstawowa znajduje się na : <br/>
+https://github.com/AdamCekala1/Zadanie_rekrutacja <br/>
+
 Założenia:<br/>
 
-- wykonanie projektu wg. makiety
+- wykonanie projektu wg. makiety graficznej
 - zastosowanie czcionki Roboto
 - wyswietlanie danych json z adresu url oraz dodatkowy ustawieniu header requesta
 
 Dodadkowe:<br/>
 
 -paginacja, wyświetlanie określonej ilości użytkowników na "strone"<br/>
+-możliwość wpisania strony w menu paginacji (dwa inputy), oraz wybór stron sąsiadujących z aktualną  <br/>
 -możliwość zmiany ilości użytkowników na stronie <br/>
 -wyszukiwanie po ilośc strzelonych goli, nazwy nazwodnika oraz pozycji w rankingu<br/>
--wyswietlanie dodatkowych informacji (z json) w oddzielnym oknie po kliknięciu na wybranego przez nas gracza<br/>
+-wyswietlanie dodatkowych informacji (z json) w oddzielnym oknie po kliknięciu na wybranego przez nas gracza (dół strony) <br/>
 -zamknięcie wyświetlania dodatkowych informacji<br/>
-
-=======
--paginacja, wyświetlanie określonej ilości użytkowników na "strone"
--wyszukiwanie po ilośc strzelonych goli, nazwy nazwodnika oraz pozycji w rankingu
--wyswietlanie dodatkowych informacji (z json) w oddzielnym oknie po kliknięciu na wybranego przez nas gracza
--zamknięcie wyświetlania dodatkowych informacji
 
 
 ## W projekcie wykorzystana została biblioteka "React" oraz "SCSS"

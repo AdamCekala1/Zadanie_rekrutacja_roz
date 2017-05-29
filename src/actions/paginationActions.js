@@ -8,13 +8,14 @@ const paginationColumn=(
     setCurrentPageFunction,
     )=>{
         if(data){
+            console.log("*********")
             return Array.from(new Array(5), (x,i) => {
                 let number = currentPage + i-2;
                 if(number > 0 && number < data.length/itemsPerPage+1){
                     //if it is our page change css class
                     if(number === currentPage){
                         return( 
-                             <li key={number} className="disabled activeButtonPaginate" onClick={()=>setCurrentPageFunction(number)}>{number}</li>
+                             <li key={number} className=" activeButtonPaginate" onClick={()=>setCurrentPageFunction(number)}>{number}</li>
                             );
                     //otherwise set standard
                     }else{
@@ -29,13 +30,19 @@ const paginationColumn=(
     }
 
 //set button which can set first page
-const firstPartPagination=(currentPage,setCurrentPageFunction)=>{
+const firstPartPagination=(
+    currentPage,
+    setCurrentPageFunction,
+    setCurrentPageInInput
+        )=>{
         //if we are not on first page show our button, otherwise it is unnecessery
         if(currentPage!==1){
             return (
                 <ul>
                     <li onClick={()=>setCurrentPageFunction(1)}>Pierwsza</li>
-                    <li className="disabled">...</li>
+                    <li className="disabled">
+                        <input type="text" placeholder="NUMER" onChange={(e)=>setCurrentPageInInput(e)}></input>
+                    </li>
                 </ul>
             );
         }
@@ -46,13 +53,16 @@ const    LastPartPagination=(
     data,
     currentPage,
     itemsPerPage,
-    setCurrentPageFunction
+    setCurrentPageFunction,
+    setCurrentPageInInput
         )=>{
         if(data){
             if(currentPage!==Math.ceil(data.length/itemsPerPage)){
                 return (
                     <ul>
-                        <li className="disabled">...</li>
+                        <li className="disabled">
+                            <input type="text" placeholder="NUMER" onChange={(e)=>setCurrentPageInInput(e)}></input>
+                        </li>
                         <li onClick={()=>setCurrentPageFunction(Math.ceil(data.length/itemsPerPage))}>
                             Ostatnia
                         </li>

@@ -107,10 +107,13 @@ input {
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75); }
 
 .pagination ul {
+  overflow: hidden;
+  padding: 0;
   display: flex;
   flex-direction: row;
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  flex-wrap: wrap; }
   .pagination ul > ul {
     padding-left: 0; }
   .pagination ul li {
@@ -122,10 +125,19 @@ input {
     .pagination ul li:hover {
       background: gray; }
   .pagination ul li.disabled {
-    background: gray;
+    padding: 0;
     cursor: default; }
+    .pagination ul li.disabled input {
+      width: 100%;
+      height: 100%;
+      max-width: 80px;
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      text-align: center; }
   .pagination ul li.activeButtonPaginate {
-    background: navy; }
+    background: navy;
+    padding: 20px; }
 
 .displayMoreInformation {
   padding: 70px 0;

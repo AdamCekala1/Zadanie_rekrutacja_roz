@@ -105,7 +105,8 @@ class Ranking extends Component{
                 <ul>
                     {firstPartPagination(
                         this.state.currentPage,
-                        this.setCurrentPage
+                        this.setCurrentPage,
+                        this.setCurrentPageInInput
                     )}
                     {paginationColumn(
                         this.state.data,
@@ -118,7 +119,8 @@ class Ranking extends Component{
                         this.state.data,
                         this.state.currentPage,
                         this.state.itemsPerPage,
-                        this.setCurrentPage
+                        this.setCurrentPage,
+                        this.setCurrentPageInInput
                     )}
                 </ul>
             );
@@ -140,7 +142,14 @@ class Ranking extends Component{
             })
         }
     }
-
+    setCurrentPageInInput=(e)=>{
+        let value = Number(e.target.value)
+        if(Number(value) && value>0 && Number.isInteger(value)){
+            this.setState({
+                currentPage:value
+            })
+        }
+    }
     //display main table
     displayMainContent=()=>{
         return(
@@ -182,6 +191,10 @@ class Ranking extends Component{
             </section>
         )
     }
+    //****************************************************************
+    //***************   RENDER      **********************************
+    //****************************************************************
+    
     render(){
         //if loading is finished
         if(!this.state.loading){
