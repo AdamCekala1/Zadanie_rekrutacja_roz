@@ -11,7 +11,7 @@ Założenia:<br/>
 - wyswietlanie danych json z adresu url oraz dodatkowy ustawieniu header requesta
 
 Dodadkowe:<br/>
-
+-animacja ładowania danych zakończona po ich pobraniu (pozytywnym lub negatywnym)  br/>
 -paginacja, wyświetlanie określonej ilości użytkowników na "strone"<br/>
 -możliwość wpisania strony w menu paginacji (dwa inputy), oraz wybór stron sąsiadujących z aktualną  <br/>
 -możliwość zmiany ilości użytkowników na stronie <br/>
