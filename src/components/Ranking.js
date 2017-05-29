@@ -3,6 +3,7 @@ import Loading from "./Loading";
 import DataRow from "./DataRow";
 import Header from "./Header";
 import Footer from "./Footer";
+import ItemsPerPageInput from "./ItemsPerPageInput";
 
 import {displayData,displayMainRow,displayMoreInformation,displayButtonCloseMoreInf} from "../actions/displayActions"
 import {fetchData} from "../actions/fetchDataActions"
@@ -123,51 +124,74 @@ class Ranking extends Component{
             );
         };
     };
+    //change items per page, if not number do nothing, if 0 is change to default 10
+    setItemsPerPage=(e)=>{
+        let value = e.target.value
+        if(Number(value)){
+            this.setState({
+                itemsPerPage:value,
+                currentPage:1
+            })
+        }
+        if(value.length===0){
+            this.setState({
+                itemsPerPage:10,
+                currentPage:1
+            })
+        }
+    }
+
+    //display main table
+    displayMainContent=()=>{
+        return(
+            <section className="container mainTable">
+                <h4> Aby dowiedzieć się więcej o zawodniku proszę kliknąć na jego wiersz. </h4>
+                <table>
+                    <thead>
+                        <tr>
+                            {displayMainRow(this.mainRowContent)}
+                        </tr>
+                    </thead>
+                        <tbody className="dataRows">
+                            <tr className="searchInputs">
+                                <td>
+                                    <input type="text" placeholder="Szukaj pozycji..." value={this.state.searchNumber}  onChange={(e)=>this.searchNumber(e)}></input>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Szukaj zawodnika..." value={this.state.searchName}  onChange={(e)=>this.searchName(e)}></input>
+                                </td>
+                                <td>
+                                    <input type="text" placeholder="Szukaj goli..." value={this.state.searchGoals}  onChange={(e)=>this.searchGoals(e)}></input>
+                                </td>
+                            </tr>
+                          {
+                                displayData(
+                                    this.state.data,
+                                    this.state.searchName,
+                                    this.state.searchNumber,
+                                    this.state.searchGoals,
+                                    this.state.currentPage,
+                                    this.state.itemsPerPage,
+                                    this.mainRowContent,
+                                    this.takeMoreInformation,
+                                    DataRow
+                                )
+                            }
+                        </tbody>
+                </table>
+            </section>
+        )
+    }
     render(){
         //if loading is finished
         if(!this.state.loading){
             return(
                 <div className="">
                     <Header />
-                    <section className="container mainTable">
-                        <table>
-                            <thead>
-                                <tr>
-                                    {displayMainRow(this.mainRowContent)}
-                                </tr>
-                            </thead>
-                                <tbody className="dataRows">
-                                    <tr className="searchInputs">
-                                        <td>
-                                            <input type="text" placeholder="Szukaj pozycji..." value={this.state.searchNumber}  onChange={(e)=>this.searchNumber(e)}></input>
-                                        </td>
-                                        <td>
-                                            <input type="text" placeholder="Szukaj zawodnika..." value={this.state.searchName}  onChange={(e)=>this.searchName(e)}></input>
-                                        </td>
-                                        <td>
-                                            <input type="text" placeholder="Szukaj goli..." value={this.state.searchGoals}  onChange={(e)=>this.searchGoals(e)}></input>
-                                        </td>
-                                    </tr>
-                                  {
-                                        displayData(
-                                            this.state.data,
-                                            this.state.searchName,
-                                            this.state.searchNumber,
-                                            this.state.searchGoals,
-                                            this.state.currentPage,
-                                            this.state.itemsPerPage,
-                                            this.mainRowContent,
-                                            this.takeMoreInformation,
-                                            DataRow
-                                        )
-                                    }
-                                </tbody>
-                        </table>
-                    </section>
+                    <ItemsPerPageInput  setItemsPerPage={this.setItemsPerPage}/>
+                    {this.displayMainContent()}
                     <section className="pagination">
-                        <ul>
-                            {this.pagination()}
-                        </ul>
+                        {this.pagination()}
                     </section>
                     <section className="container displayMoreInformation">
                         {displayMoreInformation(this.state.displayPlayer)}

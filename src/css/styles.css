@@ -39,10 +39,17 @@ body {
       height: auto; }
 
 .mainTable {
-  position: relative; }
+  position: relative;
+  padding-top: 40px; }
+  .mainTable h4 {
+    background: rgba(0, 230, 0, 0.1);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin: 0; }
 
 table {
-  padding: 30px 0;
+  padding: 0 0 30px;
   border-spacing: 0px;
   width: 100%; }
   table th, table td {
@@ -91,12 +98,12 @@ table {
   background: #fff;
   color: #2f3235; }
 
-.searchInputs input {
+input {
   border: none;
   width: 90%;
   padding: 10px 5%;
   border-radius: 10px; }
-  .searchInputs input:hover, .searchInputs input:active, .searchInputs input:focus {
+  input:hover, input:active, input:focus {
     box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.75); }
 
 .pagination ul {
@@ -160,6 +167,26 @@ table {
     .displayMoreInformation .closeMoreInformation:hover {
       color: #2f3235;
       background: #fff; }
+
+.setItemsPerPage {
+  width: 100%;
+  background: #fafafa;
+  min-width: 250px; }
+  .setItemsPerPage input {
+    margin: 20px 0; }
+  .setItemsPerPage h4 {
+    text-align: center;
+    border-bottom: 1px solid #ededed;
+    box-shadow: 0 1px 0 0 white;
+    margin: 0;
+    padding: 20px; }
+  @media (min-width: 992px) {
+    .setItemsPerPage {
+      z-index: 100;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 10vw; } }
 
 .footerSection {
   background: #171a1d;

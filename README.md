@@ -5,11 +5,19 @@ Założenia:<br/>
 - zastosowanie czcionki Roboto
 - wyswietlanie danych json z adresu url oraz dodatkowy ustawieniu header requesta
 
+Dodadkowe:<br/>
+
+-paginacja, wyświetlanie określonej ilości użytkowników na "strone"<br/>
+-możliwość zmiany ilości użytkowników na stronie <br/>
+-wyszukiwanie po ilośc strzelonych goli, nazwy nazwodnika oraz pozycji w rankingu<br/>
+-wyswietlanie dodatkowych informacji (z json) w oddzielnym oknie po kliknięciu na wybranego przez nas gracza<br/>
+-zamknięcie wyświetlania dodatkowych informacji<br/>
+
 
 ## W projekcie wykorzystana została biblioteka "React" oraz "SCSS"
 <br/>
 ## Dodatkowe informacje : <br/>
-Podgląd projektu online na stronie Github Pages : https://adamcekala1.github.io/Zadanie_rekrutacja/
+Podgląd projektu online na stronie Github Pages : https://adamcekala1.github.io/Zadanie_rekrutacja_roz/
 <br/>
 Wersja produkcyjna dosepna w katalogu docs 
 <br/>
@@ -23,8 +31,10 @@ Projekt został podzielony na komponenty. W folderze scr->components znajdują :
 -Ranking.js - zawarta jest tu logika aplikacji. JEst to główny komponent stworzony na klasie.<br/>
 -DataRow.js - "dumb component"/"functional component" - odpowiedzialny jedynie do wyswietlania informacji w wierszach tabeli. Nie ma w nim logiki<br/>
 -Loading.js - również "dumb component"/"functional component" - odpowiedzialny za animację w trakcje pobierania danych. Gdy dane zostaną pobrane lub wystąpi błąd to wyświetlana zostaje główna strona.<br/><br/>
--Footer.js - "dumb component"/"functional component" - wyswietla stopkę
--Header.js - "dumb component"/"functional component" - wyswietla nagłówek
+-Footer.js - "dumb component"/"functional component" - wyswietla stopkę <br/>
+-Header.js - "dumb component"/"functional component" - wyswietla nagłówek<br/>
+-ItemsPerPageInput.js - "dumb component"/"functional component" - wyswietla pole do wpisania ilości rekordów na stronie<br/>
+
 
 W Projekcie podzieliłem logikę na mniejsze funkcję oraz umieściłem je w foldrze src->actions. Znajdują się tam displayActions, fetchDataActions, paginationActions.
 
@@ -50,7 +60,7 @@ gdzie Ranking to nasz główny komponent a 'root' to id do któego chcemy go prz
 
 ## Uruchomienie projektu:<br/>
 Projekt można uruchomić na kilka sposobów. Podam rozwiązanie dla wersji dev oraz prod.<br/>
-Pierwszym sposobem do wglądu jest uruchomienie w przeglądarce pliku docs->index.html lub podgląd na stronie GithubPages: https://adamcekala1.github.io/Zadanie_rekrutacja/ <br/>
+Pierwszym sposobem do wglądu jest uruchomienie w przeglądarce pliku docs->index.html lub podgląd na stronie GithubPages: https://adamcekala1.github.io/Zadanie_rekrutacja_roz/ <br/>
 Drugim sposobem jest pobranie projektu poprzez klonowanie, rozpakowanie. W konsoli przechodzimy do rozpakowanego folderu lub (w przypadku systemu windows) trzymając przycisk shift klikamy prawym przyciskiem myszy na nasz folder i wybieramy otwarcie konsoli w tym miejscu. Kolejnym krokiem jest instalacja modułów zawartych w package.json poprzez "npm install". Po instalacji wystarczy wpisać "npm start" by nasza strona została uruchomiona.
 <br/><br/>
 
